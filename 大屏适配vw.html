@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body, ul{
+      margin: 0;
+      padding: 0;
+    }
+    /* 1920设计稿：100vw = (1920 / 100)px，1vw = 19.2px */
+    /* 1920px = (1920 / 19.2)vw = 100vw */
+    body {
+      width: 100vw;
+      height: 56.25vw;
+      box-sizing: border-box;
+      border: 3px solid red;
+    }
+    ul {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      width: 33.33%;
+      height: 50%;
+      box-sizing: border-box;
+      border: 3px solid greenyellow;
+      font-size: 1.5625vw;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <!-- <script>
+    // 1.获取html元素
+    const htmlEl = document.documentElement
+
+    function setUnit () {
+      // 2.获取html宽度（视口宽度）
+      const htmlWidth = htmlEl.clientWidth
+      // 3.根据宽度计算一个html的font-size大小
+      const htmlFontSize = htmlWidth / 24
+      // 4.将font-size设置到html上
+      htmlEl.style.fontSize = htmlFontSize + 'px'
+    }
+
+    // 保证第一次进来时，可以设置一次font-size
+    setUnit()
+
+    // 当屏幕尺寸发生变化，实时修改html的font-size
+    window.addEventListener('resize', setUnit)
+  </script> -->
+</body>
+</html>

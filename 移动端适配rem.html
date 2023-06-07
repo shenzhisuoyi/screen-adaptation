@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- width：设置布局视口的宽度 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 2.6667rem;
+      height: 2.6667rem;
+      background: forestgreen;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    // 1.获取html元素
+    const htmlEl = document.documentElement
+
+    function setUnit () {
+      // 2.获取html宽度（视口宽度）
+      const htmlWidth = htmlEl.clientWidth
+      // 3.根据宽度计算一个html的font-size大小
+      const htmlFontSize = htmlWidth / 10
+      // 4.将font-size设置到html上
+      htmlEl.style.fontSize = htmlFontSize + 'px'
+    }
+
+    // 保证第一次进来时，可以设置一次font-size
+    setUnit()
+
+    // 当屏幕尺寸发生变化，实时修改html的font-size
+    window.addEventListener('resize', setUnit)
+  </script>
+</body>
+</html>
